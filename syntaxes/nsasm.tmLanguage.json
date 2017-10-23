@@ -1,0 +1,140 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "NSASM",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#chars"
+		},
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#nums"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "rem.*$"
+				},
+				{
+					"name": "meta.preprocessor.nsasm",
+					"match": "(?i)\\b(stack|heap)\\b"
+				},
+				{
+					"name": "variable.parameter.regular.nsasm",
+					"match": "(?i)\\b(r[0-9]+)\\b"
+				},
+				{
+					"name": "variable.parameter.special.nsasm",
+					"match": "(?i)\\b(var|int|char|float|str)\\b"
+				},
+				{
+					"name": "keyword.other.mnemonic.data.nsasm",
+					"match": "(?i)\\b(mov|push|pop|in|out|prt)\\b"
+				},
+				{
+					"name": "keyword.operator.mnemonic.math.nsasm",
+					"match": "(?i)\\b(add|inc|sub|dec|mul|div)\\b"
+				},
+				{
+					"name": "keyword.mnemonic.bool.nsasm",
+					"match": "(?i)\\b(and|or|xor|not|shl|shr)\\b"
+				},
+				{
+					"name": "keyword.operator.mnemonic.logic.nsasm",
+					"match": "(?i)\\b(cmp|jmp|jz|jnz|jg|jl)\\b"
+				},
+				{
+					"name": "keyword.control.mnemonic.flow.nsasm",
+					"match": "(?i)\\b(end|rst|nop|run|call|ld)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.nsasm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nsasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"chars": {
+			"name": "string.quoted.single.nsasm",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nsasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"tags": {
+			"patterns": [
+				{
+					"name": "string.quoted.other.lt-gt.include.nsasm",
+					"begin": "\\[", 
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.nsasm"
+                        }
+                    }, 
+                    "end": "\\]", 
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.nsasm"
+                        }
+                    }
+				},
+				{
+					"name": "string.quoted.other.lt-gt.include.nsasm",
+					"begin": "<", 
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.nsasm"
+                        }
+                    }, 
+                    "end": ">", 
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.nsasm"
+                        }
+                    }
+				}
+			]
+		},
+		"nums": {
+			"patterns": [ 
+				{
+					"name": "constant.numeric.float",
+					"match": "\\b([0-9]+\\.[0-9]+[fF]?)\\b"
+				},
+				{
+					"name": "constant.numeric.dec",
+					"match": "\\b[0-9]+\\b"
+				}, 
+				{
+					"name": "constant.numeric.hex",
+					"match": "\\b([0-9a-fA-F]+[hH])\\b"
+				},
+				{
+					"name": "constant.numeric.hex",
+					"match": "\\b(0x[0-9a-fA-F]+)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "src.nsasm"
+}

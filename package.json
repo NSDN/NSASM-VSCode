@@ -1,0 +1,26 @@
+{
+    "name": "nsasm",
+    "displayName": "NSASM",
+    "description": "NyaSama Assembly Script Module - Language Highlighting",
+    "version": "0.0.1",
+    "publisher": "NSDN",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nsasm",
+            "aliases": ["NSASM", "nsasm"],
+            "extensions": [".ns"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nsasm",
+            "scopeName": "src.nsasm",
+            "path": "./syntaxes/nsasm.tmLanguage.json"
+        }]
+    }
+}
