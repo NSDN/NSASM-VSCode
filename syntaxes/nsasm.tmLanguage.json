@@ -35,7 +35,7 @@
 				},
 				{
 					"name": "variable.parameter.special.nsasm",
-					"match": "(?i)\\b(var|int|char|float|str)\\b"
+					"match": "(?i)\\b(var|int|char|float|str|code)\\b"
 				},
 				{
 					"name": "keyword.other.mnemonic.data.nsasm",
@@ -51,11 +51,11 @@
 				},
 				{
 					"name": "keyword.operator.mnemonic.logic.nsasm",
-					"match": "(?i)\\b(cmp|jmp|jz|jnz|jg|jl)\\b"
+					"match": "(?i)\\b(cmp|test|jmp|jz|jnz|jg|jl)\\b"
 				},
 				{
 					"name": "keyword.control.mnemonic.flow.nsasm",
-					"match": "(?i)\\b(end|rst|nop|run|call|ld)\\b"
+					"match": "(?i)\\b(end|ret|rst|nop|run|call|ld|eval)\\b"
 				}
 			]
 		},
