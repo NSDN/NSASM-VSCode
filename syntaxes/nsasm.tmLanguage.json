@@ -27,7 +27,7 @@
 				},
 				{
 					"name": "meta.preprocessor.nsasm",
-					"match": "(?i)\\b(stack|heap)\\b"
+					"match": "(?i)\\b(stack|heap|reg|m)\\b"
 				},
 				{
 					"name": "variable.parameter.regular.nsasm",
@@ -35,15 +35,15 @@
 				},
 				{
 					"name": "variable.parameter.special.nsasm",
-					"match": "(?i)\\b(var|int|char|float|str|code)\\b"
+					"match": "(?i)\\b(var|int|char|float|str|code|map)\\b"
 				},
 				{
 					"name": "keyword.other.mnemonic.data.nsasm",
-					"match": "(?i)\\b(mov|push|pop|in|out|prt)\\b"
+					"match": "(?i)\\b(mov|push|pop|in|out|prt|use|put|get|type)\\b"
 				},
 				{
 					"name": "keyword.operator.mnemonic.math.nsasm",
-					"match": "(?i)\\b(add|inc|sub|dec|mul|div)\\b"
+					"match": "(?i)\\b(add|inc|sub|dec|mul|div|cat|dog|len)\\b"
 				},
 				{
 					"name": "keyword.mnemonic.bool.nsasm",
@@ -51,7 +51,7 @@
 				},
 				{
 					"name": "keyword.operator.mnemonic.logic.nsasm",
-					"match": "(?i)\\b(cmp|test|jmp|jz|jnz|jg|jl)\\b"
+					"match": "(?i)\\b(cmp|test|jmp|jz|jnz|jg|jl|ctn|equ)\\b"
 				},
 				{
 					"name": "keyword.control.mnemonic.flow.nsasm",
