@@ -8,13 +8,13 @@
         "vscode": "^1.17.0"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "contributes": {
         "languages": [{
             "id": "nsasm",
             "aliases": ["NSASM", "nsasm"],
-            "extensions": [".ns"],
+            "extensions": [".ns", ".nso", ".nsg"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
