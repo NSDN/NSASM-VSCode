@@ -43,7 +43,7 @@
 				},
 				{
 					"name": "keyword.operator.mnemonic.math.nsasm",
-					"match": "(?i)\\b(add|inc|sub|dec|mul|div|cat|dog|len)\\b"
+					"match": "(?i)\\b(add|inc|sub|dec|mul|div|mod|cat|dog|len)\\b"
 				},
 				{
 					"name": "keyword.mnemonic.bool.nsasm",
