@@ -51,11 +51,11 @@
 				},
 				{
 					"name": "keyword.operator.mnemonic.logic.nsasm",
-					"match": "(?i)\\b(cmp|test|jmp|jz|jnz|jg|jl|ctn|equ)\\b"
+					"match": "(?i)\\b(cmp|test|jmp|jz|jnz|jg|jl|ctn|equ|loop)\\b"
 				},
 				{
 					"name": "keyword.control.mnemonic.flow.nsasm",
-					"match": "(?i)\\b(end|ret|rst|nop|run|call|ld|eval)\\b"
+					"match": "(?i)\\b(end|ret|rst|nop|run|call|ld|eval|par)\\b"
 				}
 			]
 		},
